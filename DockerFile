@@ -1,0 +1,21 @@
+# ベースイメージとしてGoを使用
+FROM golang:1.20-alpine
+
+# ワーキングディレクトリの作成
+WORKDIR /app
+
+# Go Modulesを使用した依存関係をインストール
+COPY go.mod ./
+RUN go mod download
+
+# ソースコードをコピー
+COPY . .
+
+# ビルドを実行
+RUN go build -o main .
+
+# サーバーを起動
+CMD ["/app/main"]
+
+# 使用するポートを指定
+EXPOSE 8080
