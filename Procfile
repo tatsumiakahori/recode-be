@@ -1,1 +1,1 @@
-web: ./recode-be
+web: ./main
