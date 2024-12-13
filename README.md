@@ -1,2 +1,2 @@
 # recode-be
-recodeのバックエンド(Gin)
+クローゼット管理アプリreCODEのバックエンド(Gin)
